@@ -1,0 +1,112 @@
+/*--------CLASES/IDENTIFICADORES-------*/
+
+
+/*******Empleado en barra de navegación**********/
+#IniciarSesion{
+  color: red;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.2em;
+}
+
+#RegistroCuenta{
+color: red;
+font-family: 'Roboto Condensed', sans-serif;
+font-size: 1.2em;
+}
+
+#MenuDesplegable{
+color: red;
+font-family: 'Roboto Condensed', sans-serif;
+font-size: 1.2em;
+margin-right: 10px;
+}
+
+.nav-item{
+  align-content: center;
+}
+
+#Imagen{
+  width: 65%;
+  height: 65%;
+  padding-left: 5px;
+  background-color: white;
+}
+
+/***Empleado en grilla de tipo de Pokémon***/
+#tipos{
+    
+  /*background-color: rgb(192, 189, 189);*/
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+#Fila{
+  padding-top:7.5px;
+  padding-bottom:7.5px;
+  
+}
+
+#TipoPokemon{
+  padding: 15px;
+  border-radius: 15px;
+  margin: 20px;
+}
+
+#titleTipos{
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.2em;
+  border-radius: 15px;
+  /*background-color: gray;*/
+  /*color: white;*/
+}
+/*************Empleado en modal************/
+#iniciar{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1em;
+  
+}
+#registro{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1em;
+}
+
+.modal-header{
+  background-color:black;
+  color:white;
+}
+
+.modal{
+  border-radius: 20px;
+}
+ 
+.modal-body{
+  padding:50px 60px 50px 60px;
+  
+}
+
+.modal-content { 
+  border-radius: 15px;
+  
+}
+
+.modal-header{
+  border-radius: 14px;
+  
+}
+
+/*******Empleado en pie de página********/
+#PiePagina{
+  background-color:black;
+  color:white;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size:1em;  
+  text-align: center;
+  padding-bottom: 0px;
+  bottom: 0px;
+}
+  

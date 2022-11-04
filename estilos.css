@@ -1,0 +1,320 @@
+/*---------------GENERAL--------------*/
+
+.container-fluid{
+  padding: 0px;
+}
+
+
+
+/*-------------FUENTES-----------------*/
+
+@font-face {
+  font-family: 'PokemonFontHollow';
+  src: url('fonts/Pokemon Hollow.ttf');
+  
+}
+
+@font-face {
+  font-family: 'PokemonFontSolid';
+  src: url('fonts/Pokemon Solid.ttf');
+  
+}
+
+
+/*--------CLASES/IDENTIFICADORES-------*/
+
+
+/*******Empleado en barra de navegación**********/
+#header{
+  padding-left:0.75rem;
+  padding-right:0.75rem;
+}
+
+/*Centra los elementos dispuestos como item en la barra de navegación (Iniciar Sesio, etc)*/
+.nav-item{
+  align-content: center;
+}
+
+/*Para el menú desplegable*/
+.dropdown-item:hover{
+  background-color: gray;
+  cursor: pointer;
+}
+
+/*A pesar de ser iguales las siguientes 3 definiciones, se las dejó por separado para que en el momenento de mostrar 
+los modals se puedan diferenciar en JS*/
+#IniciarSesion{
+  color: red;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.2em;
+}
+
+#RegistroCuenta{
+color: red;
+font-family: 'Roboto Condensed', sans-serif;
+font-size: 1.2em;
+}
+
+#MenuDesplegable{
+color: red;
+font-family: 'Roboto Condensed', sans-serif;
+font-size: 1.2em;
+margin-right: 10px;
+}
+
+/*Imagen utilizada para el logo de la barra de navegación*/
+#Imagen{
+  width: 65%;
+  height: 65%;
+  padding-left: 5px;
+  background-color: white;
+}
+
+/************Empleado en Slides**************/
+#ColorCarrousel{
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: justify;
+    color: white;
+    margin-top: 10px;  
+    /*el tamaño de la letra será relativo al tamaño de la pantalla, por tal motivo se empleó las unidades vw*/
+    font-size: 1.2vw;
+}
+
+/*Alinear el texto del lado derecho del Slide*/
+.carousel-caption {
+  position: absolute;
+  width: 50%;
+  height: 95%;
+  left: 45%;
+}  
+
+.carousel-inner{
+  position: relative;
+}
+
+#botonVerMas{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1vw;
+  background-color: gray;
+  border-radius: 5%;
+  float:left;
+}
+
+#textoSlide{
+  font-family: 'PokemonFontSolid';
+  font-size: 2.5vw;
+  color: red;
+  text-align: start;
+  padding-bottom: 2%;
+  margin-top: 10%;
+}  
+
+/*****Empleado en Sección de Pokémon********/
+#SeccionPokemon{
+  padding: 0%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 28px;
+    margin-right:8px;         
+}
+#cartas{
+  box-shadow: 4px 4px 4px  rgb(114, 112, 112);
+  margin: 17px;
+  width: 90%;
+  height: auto;
+}
+
+#cartaClickeada{
+  margin-top: 17px;
+  margin-bottom: 17px;
+  align-content: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  
+}
+
+#FilaPokemon{
+  margin-left:10px;
+  margin-right:10px;
+}
+
+.card-title{
+font-size:1v;
+align-content: center;
+}
+
+.card-body{
+margin-left: 7px;
+margin-right: 7px;
+}
+
+.col{
+  padding: 0px;
+}
+
+/*****Empleado en Sección de busqueda********/
+#busqueda{
+  width: 20%;
+  margin-top: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 15px;
+  color: grey;
+}
+
+
+#cartaBusqueda{
+  box-shadow:   4px 6px 6px  gray;
+  align-content: center;
+  margin-top: 17px;
+  margin-bottom: 17px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 7px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/*******Empleado en card de pokémon********/
+
+#Electrico{
+  background-color: rgb(170, 170, 19);
+  margin-top:2px;
+  margin-bottom: 2px;
+}
+
+#Insecto{
+  background-color: rgb(134, 173, 75);
+  margin-top:2px;
+  margin-bottom: 2px;
+}
+#Oscuro{
+  background-color: black;
+  margin-top:2px;
+  margin-bottom: 2px;
+}
+#Dragon{
+  background-color: rgb(155, 27, 27);
+  margin-top:2px;
+  margin-bottom: 2px;
+}
+#Hada{
+  background-color: rgb(189, 39, 144);
+  margin-top:2px;
+  margin-bottom: 2px;
+}
+#Lucha{
+  background-color: rgb(170, 61, 21);
+  margin-top:2px;
+  margin-bottom: 2px;
+}
+#Fuego{
+  background-color: rgb(212, 142, 13);
+  margin-top:2px;
+  margin-bottom: 2px;
+}
+#Vuelo{
+  background-color: rgb(117, 139, 173);
+  margin-top:2px;
+  margin-bottom: 2px;
+}
+#Fantasma{
+  background-color: rgb(240, 71, 240);
+  margin-top:2px;
+  margin-bottom: 2px;
+}
+#Planta{
+  background-color: green;
+  margin-top:2px;
+  margin-bottom: 2px;
+}
+#Tierra{
+  background-color: brown;
+  margin-top:2px;
+  margin-bottom: 2px;
+}
+#Hielo{
+  background-color: rgb(83, 182, 182);
+  margin-top:2px;
+  margin-bottom: 2px;
+}
+#Normal{
+  background-color: rgb(156, 156, 129);
+  margin-top:2px;
+  margin-bottom: 2px;
+}
+#Veneno{
+  background-color: purple;
+  margin-top:2px;
+  margin-bottom: 2px;
+}
+#Psiquico{
+  background-color: rgb(85, 9, 85);
+  margin-top:2px;
+  margin-bottom: 2px;
+}
+#Roca{
+  background-color: rgb(59, 59, 59);
+  margin-top:2px;
+  margin-bottom: 2px;
+}
+#Metal{
+  background-color: rgb(83, 83, 83);
+  margin-top:2px;
+  margin-bottom: 2px;
+}
+#Agua{
+  background-color: rgb(16, 141, 141);
+  margin-top:2px;
+  margin-bottom: 2px;
+}
+#Defecto{
+  background-color: rgb(175, 138, 92);
+  margin-top:2px;
+  margin-bottom: 2px;
+}
+
+/*************Empleado en modal************/
+
+#iniciar{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1em;
+  
+}
+#registro{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1em;
+}
+
+.modal-header{
+  /*background-color: rgb(236, 184, 184);*/
+  background-color: black;
+  color:white;
+}
+
+.modal{
+  border-radius: 20px;
+}
+ 
+.modal-body{
+	padding:50px 60px 50px 60px;
+	
+}
+.modal-content { 
+  border-radius: 15px;
+  
+}
+
+.modal-header{
+  border-radius: 14px;
+  
+}
+
+/*******Empleado en pie de página********/
+
+#PiePagina{
+  background-color:black;
+  color:white;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size:1em;  
+  text-align: center;
+  padding-bottom: 0px;
+}

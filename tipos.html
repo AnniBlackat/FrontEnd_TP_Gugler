@@ -1,0 +1,340 @@
+<!DOCTYPE html> 
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="keyword" content="">
+  <link rel="icon" href="/imagenes/Logo.png">
+  <title>Trabajo Final FRONTEND Lopez Anabel</title>
+
+  <!--Fuentes utilizadas-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&family=Roboto+Condensed:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+  <!--Bootstrap-->
+  <link href="bootstrap-5.1.3-dist/css/bootstrap.css" rel="stylesheet">
+  <script src="bootstrap-5.1.3-dist/js/bootstrap.js"></script>
+
+  <!--Ajax/jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Vinculación con otroa archivos-->
+  <link rel="stylesheet" href="estiloTipos.css?1.0">
+  <script src="miScript.js"> </script>
+  
+</head>
+
+<header id="header"> 
+  <div class="container-fluid">
+    <!--Barra de Navegación-->
+  <nav class="navbar navbar-expand-sm navbar-expand-lg navbar-expand-xl navbar-light bg-white">
+    <!--Logo de sitio-->
+    <a class="navbar-brand" href="index.html"> 
+      <img id="Imagen" src="/imagenes/Logo.png" alt="Inicio">
+    </a> 
+    <!--Botón que aparecerá cuando la ventana posea un menor tamaño y el menu no pueda motrarse en su totalidad-->
+    <button id="botonColapso" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+   <!--Menú--> 
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item ">
+          <a id="IniciarSesion" class="nav-link" href="#" class="button">Iniciar Sesión</a>
+        </li>
+        <li class="nav-item">
+          <a id="RegistroCuenta" class="nav-link" href="#" class="button">Registrarse</a>
+        </li>
+        <!--Menú dropdown, nos permitirá ingresar a una biblioteca conforme al tipo de pokemon o a la sitio oficial de-->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle " href="#" id="MenuDesplegable" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Ayuda
+          </a>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="MenuDesplegable">
+            <a class="dropdown-item" href="tipos.html">Tipos de Pokémon</a>
+            <a class="dropdown-item" href="https://www.pokemon.com/es/pokedex/" target="_blank">Pagina Oficial</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  </div>
+</header>
+
+<body>
+  
+  <div id="titleTipos">
+    <h1>Tipos de Pokemón</h1>
+  </div>
+  <section id="TipoPokemon">
+     <div class="row row-cols-1 row-cols-md-6 g-4 " id="Fila">
+      <div class="col">
+        <div class="card border-0" id="tipos" >
+          <a href="https://www.wikidex.net/wiki/Tipo_bicho" target="_blank">
+            <img src="/imagenes/TipoBicho.png" class="card-img-top" alt="Tipo Bicho">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0"  id="tipos">
+          <a href="https://www.wikidex.net/wiki/Tipo_siniestro" target="_blank">
+            <img src="/imagenes/TipoOscuro.png" class="card-img-top" alt="Tipo Oscuro"> 
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0"  id="tipos">
+          <a href="https://www.wikidex.net/wiki/Tipo_drag%C3%B3n" target="_blank">
+            <img src="/imagenes/TipoDragon.png" class="card-img-top" alt="Tipo Dragón" >
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0"  id="tipos">
+          <a href="https://www.wikidex.net/wiki/Tipo_el%C3%A9ctrico" target="_blank">
+            <img src="/imagenes/TipoElectricidad.png" class="card-img-top" alt="Tipo Eléctrico">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0"  id="tipos">
+          <a href="https://www.wikidex.net/wiki/Tipo_hada" target="_blank">
+            <img src="/imagenes/TipoHada.png" class="card-img-top" alt="Tipo Hada">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0"  id="tipos">
+          <a href="https://www.wikidex.net/wiki/Tipo_lucha" target="_blank">
+            <img src="/imagenes/TipoLucha.png" class="card-img-top" alt="Tipo Lucha">
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row row-cols-1 row-cols-md-6 g-4 " id="Fila">
+      <div class="col">
+        <div class="card border-0"  id="tipos">
+          <a href="https://www.wikidex.net/wiki/Tipo_fuego" target="_blank">
+            <img src="/imagenes/TipoFuego.png" class="card-img-top" alt="Tipo Fuego" >
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0"  id="tipos">
+          <a href="https://www.wikidex.net/wiki/Tipo_volador" target="_blank">
+            <img src="/imagenes/TipoVuelo.png" class="card-img-top" alt="Tipo Vuelo">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0"  id="tipos">
+          <a href="https://www.wikidex.net/wiki/Tipo_fantasma" target="_blank">
+            <img src="/imagenes/TipoFantasma.png" class="card-img-top" alt="Tipo Fantasma" >
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0"  id="tipos">
+          <a href="https://www.wikidex.net/wiki/Tipo_planta" target="_blank">
+            <img src="/imagenes/TipoPlanta.png" class="card-img-top" alt="Tipo Planta" >
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0"  id="tipos">
+          <a href="https://www.wikidex.net/wiki/Tipo_tierra" target="_blank">
+            <img src="/imagenes/TipoTierra.png" class="card-img-top" alt="Tipo Tierra" >
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0"  id="tipos">
+          <a href="https://www.wikidex.net/wiki/Tipo_hielo" target="_blank">
+            <img src="/imagenes/TipoHielo.png" class="card-img-top" alt="Tipo Hielo" >
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-6 g-4 " id="Fila">
+      <div class="col">
+        <div class="card border-0"  id="tipos">
+          <a href="https://www.wikidex.net/wiki/Tipo_normal" target="_blank">
+            <img src="/imagenes/TipoNormal.png" class="card-img-top" alt="Tipo Normal">
+          </a>
+        </div>
+      </div>
+      <div class="col" >
+        <div class="card border-0"  id="tipos">
+          <a href="https://www.wikidex.net/wiki/Tipo_veneno" target="_blank">
+            <img src="/imagenes/TipoVeneno.png" class="card-img-top" alt="Tipo Veneno">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0"  id="tipos">
+          <a href="https://www.wikidex.net/wiki/Tipo_ps%C3%ADquico" target="_blank">
+            <img src="/imagenes/TipoPsiquico.png" class="card-img-top" alt="Tipo Psíquico">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0"  id="tipos">
+          <a href="https://www.wikidex.net/wiki/Tipo_roca" target="_blank">
+            <img src="/imagenes/TipoRoca.png" class="card-img-top" alt="Tipo Roca">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0"  id="tipos">
+          <a href="https://www.wikidex.net/wiki/Tipo_acero" target="_blank">
+            <img src="/imagenes/TipoAcero.png" class="card-img-top" alt="Tipo Acero" >
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0"  id="tipos">
+          <a href="https://www.wikidex.net/wiki/Tipo_agua" target="_blank">
+            <img src="/imagenes/TipoAgua.png" class="card-img-top" alt="Tipo Agua">
+          </a>
+        </div>
+      </div>
+    </div>
+</section>
+
+<div id="iniciar" class="modal" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Iniciar Sesión</h5>
+        <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Dirección de correo electrónico</label>
+            <input type="email" class="form-control" >
+           </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+            <input type="password" class="form-control">
+          </div>
+          <div id="recuperar" class="form-text" ><a href="#">¿Ha olvidado su contraseña?</a></div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-secondary">Acceder</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="registro" class="modal" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Registrarse</h5>
+        <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nombre</label>
+            <input type="email" class="form-control" >
+           </div>
+           <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Apellido</label>
+            <input type="email" class="form-control" >
+           </div>
+           <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Dirección de correo electrónico</label>
+            <input type="email" class="form-control">
+           </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" >
+          </div>
+          <div class="form-text">¿Ya se encuentra registrado? <a href="#iniciar">Iniciar Sesión</a> </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-secondary">Registrarme</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="seleccion" class="modal" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Registrarse</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="cuerpoSeleccion" class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nombre</label>
+            <input type="email" class="form-control">
+           </div>
+           <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Apellido</label>
+            <input type="email" class="form-control">
+           </div>
+           <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Dirección de correo electrónico</label>
+            <input type="email" class="form-control" >
+           </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+            <input type="password" class="form-control">
+          </div>
+          <div id="recuperar" class="form-text">¿Ya se encuentra registrado? Iniciar Sesion</div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-secondary">Registrarme</button>
+      </div>
+    </div>
+  </div>
+</div>
+      
+<!--Pie de página-->
+<footer class="text-center mt-4">   
+  <section class="d-flex justify-content-center p-4" id="PiePagina">    
+    <div class="container-fluid text-start m-3" >
+      <div class="row mt-3">
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-2 mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">Contexto</h6>
+          <p>
+            Trabajo final realizado en el curso de Desarrollo Web Frontend brindado por el Laboratorio Gugler
+          </p>
+        </div>
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-2 mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">Herramientas</h6>
+          <p>HMTL-CSS</p>
+          <p>JavaScript</p>
+          <p>Bootstrap</p>
+          <p>Jquery-Ajax</p>
+        </div>
+      </div>
+  </section>  
+  <div class="text-center p-3"  style="background-color: rgb(27, 27, 27); color: gray;">
+    <p class="m-0"> &copy; 2021 Anabel López 
+      <a>
+        <!--Icono de Git Hub-->
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+      </a>
+    </p> 
+  </div>
+</footer>
+
+
+      
+</body>
+
+</html>
