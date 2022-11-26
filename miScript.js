@@ -18,6 +18,15 @@ $( document ).ready(function(){
 
     //------------------------EVENTOS-----------------------------//
 
+    $("#git").hover(
+        function(){
+        $(this).css('fill','white');
+        },function(){
+        $(this).css('fill','red');
+        }
+        );
+    
+
     //Si se efectúa un click sobre "Iniciar Sesión" se muestra el Modal
     //creado para dicha acción. El mismo se encuentra creado en el archivo
     //html de forma estática.

@@ -159,6 +159,7 @@ margin-right: 7px;
   margin-right: 10px;
   padding-left: 15px;
   color: grey;
+  
 }
 
 
@@ -171,6 +172,7 @@ margin-right: 7px;
   padding-right: 0px;
   margin-left: 7px;
   font-family: 'Roboto Condensed', sans-serif;
+  width: fit-content;
 }
 
 /*******Empleado en card de pokémon********/
