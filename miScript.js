@@ -331,7 +331,6 @@ $( document ).ready(function(){
                     console.log(data.name==" ");
                     //tomo la imagen del pokemon y la aplico en el atributo src
                     $("#"+"pokemonBuscado").attr('src',data.sprites.other.home.front_default);
-                                 
                      //modifico el contenido del titulo por el nombre del pokemon
                     cabeceraPokemon.textContent=data.name;
                     if(data.types.length==2)
