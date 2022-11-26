@@ -6,11 +6,15 @@ $( document ).ready(function(){
         
     //Creamos un arreglo que aparecera por defecto al ingresar, para que no se modifiquen los pokemon se lo hace estático
     let arrayPokemon=[2,5,6,7,8,9,4,55,1,22,36,150,236,21,15,10,16,23,50,60,48,69,30,222,105,207,27,59,41,80];
+    //variable global
     let longitudDePokemon=arrayPokemon.length;
     let banderaBooleana=true;//empleada para verificar si es la primera vez que se cargan pokemon
     //Se crea una función cuya funcionalidad será recibir un vector con valores numericos de pokemon y buscará en la api los mismos
     cargarPokemonDefecto(arrayPokemon,0,arrayPokemon.length,banderaBooleana);
     //crearCardTipo();
+    //Función realizada para cuando se desea ingresar a una card de la pantalla principal
+    clickEnCardParaDetalles(arrayPokemon);
+
 
     //------------------------EVENTOS-----------------------------//
 
@@ -28,25 +32,24 @@ $( document ).ready(function(){
         $("#registro").modal('show');
     });
 
-    $("#iniciarColapso").click(function(){
-        $("#iniciar").modal('show');
-    });
-
-    $("#registrarColapso").click(function(){
-        $("#registro").modal('show');
-    });
-
       
      //Busca el pokemon al presiona enter
+     //Busca el id formBusqueda
     $("#formBusqueda").submit(function (event) {
-        let pokemonBuscado=$('#busquedaNombrePokemon').val();
-        if (pokemonBuscado.length !== 0){ 
+        let pokemonBuscado=$('#busquedaNombrePokemon').val();//obtenemos el nombre del pokemon de acuerdo a su id
+        if (pokemonBuscado.length !== 0){ //si la longitud es distinta de cero el pokemon se encontró
+            //nos aseguramos que al presionar enter no se recargue la pagina sin buscar el pokemon
             event.preventDefault();           
-            $('#busquedaPokemon').empty();              
-            console.log(pokemonBuscado);
+            //eliminamos si existe o no algun valor que pudiera tener el input
+             $('#busquedaPokemon').empty();              
+            //verificamos por consola si nos retorna algun valor
+             console.log(pokemonBuscado);
+             //creamos una card con el nombre del pokemon solicitado
             crearCardPokemonBuscado(pokemonBuscado);
+            //mostramos en la sección derecha el pokemon 
             $('#busquedaPokemon').show();
         } else{
+            //caso para el que no se halla ningun pokemon de acuerdo al nombre solicitado
             event.preventDefault(); 
             $('#busquedaPokemon').empty();           
         }
@@ -55,33 +58,37 @@ $( document ).ready(function(){
 
      //Busca el pokemon y presiona el botón de buscar
      $("#botonBusqueda").click(function (event) {
-        let pokemonBuscado=$('#busquedaNombrePokemon').val();
-        if (pokemonBuscado.length !== 0){
-            $('#busquedaPokemon').empty();         
+        let pokemonBuscado=$('#busquedaNombrePokemon').val();//obtenemos el nombre del pokemon de acuerdo a su id
+        if (pokemonBuscado.length !== 0){//si la longitud es distinta de cero el pokemon se encontró
+            //eliminamos si existe o no algun valor que pudiera tener el input
+            $('#busquedaPokemon').empty();
+            //verificamos por consola si nos retorna algun valor         
             console.log(pokemonBuscado);
+            //creamos una card con el nombre del pokemon solicitado
             crearCardPokemonBuscado(pokemonBuscado);
+            //mostramos en la sección derecha el pokemon 
             $('#busquedaPokemon').show();
         } else{
+             //caso para el que no se halla ningun pokemon de acuerdo al nombre solicitado
             $('#busquedaPokemon').empty();
             
         }
         
       });
 
+      //Acción a realizar cuando se pasa a la pantalla de tipo de pokemon
       $("#TipoPokemonMenu").click(function (event){
        console.log("Estuvo por aquí");
+       //Se elimina la sección que contenia las cards de pokemones
         $("#SeccionPokemon").empty();
+        //Se crean cards con los tipos
         crearCardTipo();
+        //Se muestran las cards de tipos
         $("#SeccionPokemon").show();
       });
 
-      clickEnCardParaDetalles(arrayPokemon);
       
-      //alert("La resolución de tu pantalla es: " + window.innerWidth + " x " + window.innerHeight) 
-      //Si se quiere ingresar a los pokemon dispuestos en las card
-      //
-    
-
+      
     //-----------------------FUNCIONES---------------------------//
 
     //Función creada para cargar los pokemon que aparecerán por defecto.
@@ -133,15 +140,25 @@ $( document ).ready(function(){
 
 
     function clickEnCardParaDetalles(arrayPokemon){
-        let longitudDeArray=arrayPokemon.length;
+        //let longitudDeArray=arrayPokemon.length;
+        //recorremos el vector de pokemon para verificar en cuales se realizo click
         for(let i=0;i<longitudDePokemon;i++){
+            //Se busca card que posea en respectivo id
           $('#pokemon'+i.toString()).click(function () {
+              //Se obtiene el nombre del pokemon
               let nombreDePokemon= document.querySelector('#nombre'+i.toString()).textContent;
+              //Se verifica que se obtiene
               console.log(nombreDePokemon);
-              $('#SeccionPokemon').empty();   
-              $('#busquedaPokemon').hide(); 
-              crearCardPokemonClickeado(nombreDePokemon);
-              
+              //Se realiza la verificación de si se obtuvo algun id correcto
+              if(nombreDePokemon!=null){
+                //Se limpia la sección con card
+                $('#SeccionPokemon').empty();  
+                //Escondemos si había algun pokemon buscado 
+                $('#busquedaPokemon').hide(); 
+                //Se crea la card cliqueada
+                crearCardPokemonClickeado(nombreDePokemon);
+              }
+                  
           });
       }
       
@@ -202,6 +219,8 @@ $( document ).ready(function(){
           $("#"+"pokemon").attr('src',data.sprites.other.home.front_default);
           //modifico el contenido del titulo por el nombre del pokemon
           cabeceraPokemon.textContent=data.name;
+          //Se verifica cuantos tipos posee el pokemon
+          //Si la longitud del areglo types es igual a 2 se obtiene ambos datos
           if(data.types.length==2)
           {
             tipoPokemon.textContent=data.types[0].type.name;
@@ -211,7 +230,7 @@ $( document ).ready(function(){
             pieDeFicha.insertAdjacentElement("beforeend",tipoPokemon2);
             tipoPokemon2.textContent=data.types[1].type.name;
             tipoPokemon2.id=colorPorTipo(tipoPokemon2.textContent);
-          }else{
+          }else{ // en caso contrario el único tipo
             tipoPokemon.textContent=data.types[0].type.name;
             tipoPokemon.id=colorPorTipo(tipoPokemon.textContent);
           }
@@ -323,6 +342,7 @@ $( document ).ready(function(){
                       tipoPokemon2.className="rounded-pill text-capitalize text-center text-white";
                       pieDeFicha.insertAdjacentElement("beforeend",tipoPokemon2);
                       tipoPokemon2.textContent=data.types[1].type.name;
+                      //dependiendo de los tipos se asigna un color diferente a cada elemento
                       tipoPokemon2.id=colorPorTipo(tipoPokemon2.textContent);
                     }else{
                       tipoPokemon.textContent=data.types[0].type.name;
