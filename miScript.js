@@ -87,10 +87,69 @@ $( document ).ready(function(){
         $("#SeccionPokemon").show();
       });
 
+      //Acción a realizar cuando se realice un click en el boton "Acceder"
+      $("#confirmarInicio").click(function(event){
+        //Se busca el elemento del modal que posea el id "alerta"
+        const verificar=document.getElementById("alerta");
+        //Si el valor es distinto de null significa que la división 
+        //ya fue creada por lo que precisamos borrarla por si se carga de nuevo los datos, ya que se puede prestar para la confusión
+        if(verificar!=null){
+            //si existe borramos dicha división
+            verificar.remove();
+        }
+        //Se obtiene el contenido de los input
+        let correo= $("#correoInicio").val();
+        let contrasenia = $("#contraseña").val();
+        //Si no tienen ningun contenido
+        if(contrasenia.length == 0 || correo.length == 0)
+        {       
+            //Se evita la carga de datos
+            event.preventDefault();
+            //Se agrega una división manifestando la falta de campos
+            alerta('I');
+        }
+    })
+
+    $("#confirmarRegistro").click(function(event){
+        //Se busca el elemento del modal que posea el id "alerta"
+        const verificar=document.getElementById("alerta");
+        //Si el valor es distinto de null significa que la división 
+        //ya fue creada por lo que precisamos borrarla por si se carga de nuevo los datos, ya que se puede prestar para la confusión
+        if(verificar!=null){
+            //si existe borramos dicha división
+            verificar.remove();
+        }
+        //Se obtiene el contenido de los input
+        let nombre= $("#nombreR").val();
+        let apellido= $("#apellidoR").val();
+        let correo= $("#correoR").val();
+        let contrasenia = $("#contraseñaR").val();
+        //Si no tienen ningun contenido
+        if(nombre.length == 0|| apellido.length == 0 || contrasenia.length == 0 || correo.length == 0)
+        {       
+            //Se evita la carga de datos
+            event.preventDefault();
+            //Se agrega una división manifestando la falta de campos
+            alerta('R');
+        }
+    })
       
       
     //-----------------------FUNCIONES---------------------------//
 
+    //Función creada para notificar al usuario la existencia de campos
+    //sin completar
+    function alerta(parametro){
+        //Se crea la división
+        const aviso=document.createElement('div');
+        aviso.id="alerta";
+        aviso.setAttribute('class','mt-2 py-1 pl-2 alert alert-danger');
+        aviso.textContent="Faltan completar campos";
+        //Se coloca al final del formulario.
+        $('#formulario'+parametro).append(aviso);
+    }
+
+    
     //Función creada para cargar los pokemon que aparecerán por defecto.
     //Para esto lo que se realizó es pasar un arreglo con los mismos.
     //A partir del parametro no solo se crearán las card sino que también

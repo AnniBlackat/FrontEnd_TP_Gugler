@@ -157,20 +157,20 @@
         <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
+        <form id="formularioI">
           <div class="mb-3">
             <label for="Direccion de correo electrónico" class="form-label">Dirección de correo electrónico</label>
-            <input type="email" class="form-control">
+            <input id="correoInicio" type="email" class="form-control">
            </div>
           <div class="mb-3">
             <label for="Contraseña" class="form-label">Contraseña</label>
-            <input type="password" class="form-control">
+            <input id="contraseña" type="password" class="form-control">
           </div>
           <div id="recuperar" class="form-text" ><a href="#">¿Ha olvidado su contraseña?</a></div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="submit" class="btn btn-secondary">Acceder</button>
+        <button id="confirmarInicio" type="submit" class="btn btn-secondary">Acceder</button>
       </div>
     </div>
   </div>
@@ -184,28 +184,28 @@
         <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
+        <form id="formularioR">
           <div class="mb-3">
-            <label for="Nombre" class="form-label">Nombre</label>
+            <label id="nombreR" for="Nombre" class="form-label">Nombre</label>
             <input rype="text" class="form-control">
            </div>
            <div class="mb-3">
-            <label for="Apellido" class="form-label">Apellido</label>
+            <label id="apellidoR" for="Apellido" class="form-label">Apellido</label>
             <input type="text" class="form-control">
            </div>
            <div class="mb-3">
             <label for="Dirección de correo electrónico" class="form-label">Dirección de correo electrónico</label>
-            <input type="email" class="form-control">
+            <input id="correoR" type="email" class="form-control">
            </div>
-          <div class="mb-3">
-            <label for="Contraseña" class="form-label">Contraseña</label>
+          <div  class="mb-3">
+            <label id="contraseñaR"for="Contraseña" class="form-label">Contraseña</label>
             <input type="password" class="form-control">
           </div>
           <div class="form-text">¿Ya se encuentra registrado? <a href="#iniciar">Iniciar Sesión</a> </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="submit" class="btn btn-secondary">Registrarme</button>
+        <button id="confirmarRegistro" type="submit" class="btn btn-secondary">Registrarme</button>
       </div>
     </div>
   </div>
