@@ -64,6 +64,11 @@ margin-right: 10px;
   /*background-color: gray;*/
   /*color: white;*/
 }
+
+.col{
+  margin-top: 7.5px;
+  margin-bottom: 7.5px;
+}
 /*************Empleado en modal************/
 #iniciar{
   font-family: 'Roboto Condensed', sans-serif;
