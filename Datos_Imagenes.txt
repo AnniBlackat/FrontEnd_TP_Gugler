@@ -1,0 +1,8 @@
+Datos obtenidos de terceros:
+
+Texto de Slide: https://es.wikipedia.org/wiki/Pok%C3%A9mon
+Imagenes de tipo de pokemon: https://www.serinfor.net/los-tipos-pokemons/
+Imagenes de Slide: 
+ - Charmander: https://cults3d.com/es/modelo-3d/arte/charmander-pokemon-patrickfanart
+ 
+
